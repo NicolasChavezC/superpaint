@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -34,7 +34,7 @@ color:#cbcdf5</string>
      <string>Super Paint</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QPlainTextEdit" name="txtColor">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -48,8 +48,11 @@ color:#cbcdf5</string>
 color:#b8bade;
 border-color:#cbcdf5;</string>
     </property>
+    <property name="plainText">
+     <string>#FF0000</string>
+    </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
+   <widget class="QSlider" name="slider">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -58,11 +61,20 @@ border-color:#cbcdf5;</string>
       <height>21</height>
      </rect>
     </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>80</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnLine">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -84,7 +96,7 @@ border-color:#cbcdf5;</string>
       <normaloff>../icons/line_end_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</normaloff>../icons/line_end_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="btnSquare">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -106,7 +118,7 @@ border-color:#cbcdf5;</string>
       <normaloff>../icons/square_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</normaloff>../icons/square_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="btnBrush">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -128,7 +140,7 @@ border-color:#cbcdf5;</string>
       <normaloff>../icons/brush_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</normaloff>../icons/brush_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="btnSave">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -150,7 +162,7 @@ border-color:#cbcdf5;</string>
       <normaloff>../icons/save_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</normaloff>../icons/save_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</iconset>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="btnEraser">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -172,7 +184,7 @@ border-color:#cbcdf5;</string>
       <normaloff>../icons/ink_eraser_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</normaloff>../icons/ink_eraser_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png</iconset>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboDrawings">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -187,6 +199,16 @@ color:#b8bade;
 border-color:#cbcdf5;</string>
     </property>
    </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>130</y>
+      <width>600</width>
+      <height>600</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -197,8 +219,26 @@ border-color:#cbcdf5;</string>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuPaint">
+    <property name="title">
+     <string>Paint</string>
+    </property>
+    <addaction name="actionFile"/>
+    <addaction name="actionOpen"/>
+   </widget>
+   <addaction name="menuPaint"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFile">
+   <property name="text">
+    <string>File</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
