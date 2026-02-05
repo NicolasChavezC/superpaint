@@ -199,7 +199,7 @@ color:#b8bade;
 border-color:#cbcdf5;</string>
     </property>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
+   <widget class="Canvas" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -240,6 +240,14 @@ border-color:#cbcdf5;</string>
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Canvas</class>
+   <extends>QWidget</extends>
+   <header>canvas</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
